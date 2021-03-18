@@ -5,9 +5,59 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Raleway:wght@300;400;700;800&display=swap" rel="stylesheet">
+    <title>BestShop.com</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <div class="page">
+        <header class="header">
+            <div class="container">
+                <a href="" class="header__logo">
+                    BestShop
+                </a>
+                <nav class="header__nav">
+                    <ul class="header__nav-list">
+                        <li class="header__text"><a href="">why us</a></li>
+                        <li class="header__text"><a href="">betefits</a></li>
+                        <li class="header__text"><a href="">prices</a></li>
+                        <li class="header__text"><a href="">contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
 
+        <section class="welcome">
+            <div class="welcome__container">
+                <h1 class="weclome__title">
+                    Sell More!
+                </h1>
+                <p class="weclome__text">
+                    Open shop on our platform and increase your sales
+                </p>
+
+                <a href="" class="welcome__btn">Open your shop</a>
+                <img src="assets/background.png" alt="" class="welcome__image">
+            </div>
+        </section>
+    </div>
+
+
+
+
+
+
+    <script>
+        const header = document.querySelector(".header");
+        window.addEventListener("scroll", e => {
+            if (window.scrollY > 150) {
+                header.classList.add("sticky");
+            } else {
+                header.classList.remove("sticky");
+            }
+        })
+    </script>
 </body>
 </html>
