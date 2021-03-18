@@ -13,7 +13,7 @@ a {
 }
 
 .container {
-    width: 1352px;
+    max-width: 1352px;
     margin: 0 auto;
     padding-left: 10px;
     padding-right: 10px;
@@ -50,9 +50,6 @@ a {
 
 .header__nav-list {
     display: flex;
-}
-
-.header__nav-list li {
     list-style-type: none;
 }
 
@@ -80,6 +77,7 @@ a {
 .welcome__container {
     margin-top: 130px;
     text-align: center;
+    width: 100%;
 }
 .weclome__title {
     font-family: 'Raleway', sans-serif;
