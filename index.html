@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Raleway:wght@300;400;700;800&display=swap" rel="stylesheet">
     <title>BestShop.com</title>
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
     <div class="page">
@@ -289,6 +289,17 @@
                 header.classList.remove("sticky");
             }
         })
+    </script>
+
+    <script>
+        const btn = document.querySelector(".page-nav-toogle");
+        const nav = document.querySelector(".nav__list");
+        const page = document.querySelector(".page");
+
+        btn.onclick = function () {
+            nav.classList.toggle("show");
+            page.classList.toggle("show");
+        }
     </script>
 </body>
 </html>
