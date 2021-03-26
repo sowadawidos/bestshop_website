@@ -465,6 +465,7 @@ a {
 .prices__items {
   font-size: 14px;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .prices__items::before {
@@ -678,6 +679,7 @@ a {
 
   .benefits__img-macbook {
     margin: auto;
+
   }
   .benefits__text {
     margin-top: 10px;
@@ -689,12 +691,32 @@ a {
       margin: 0;
     }
   }
-
+  .benefits__cut {
+    display: flex;
+    flex-direction: column;
+    .benefits__trumpet {
+      width: 100%;
+    }
+    .benefits__image {
+      margin-left: 0;
+      margin-top: 0;
+      width: 100%;
+    }
+  }
+  .prices__box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .prices__article {
+      margin-bottom: 20px;
+    }
+  }
 }
 @media (max-width: 670px){
   .header__nav-list a {
     padding: 20px 20px 20px;
   }
+
 }
 
 @media (max-width: 510px){
@@ -788,6 +810,34 @@ a {
       height: 130px;
       top: -21px;
       right: 150px;
+    }
+  }
+  .prices__box {
+    .prices__article {
+      width: 293px;
+      height: 251px;
+
+      display: flex;
+      .prices__details {
+        margin: 70px 22px 94px 45px;
+        .tariff__type {
+          margin-top: 0;
+        }
+      }
+      .prices__article-list {
+        margin: 25px 20px 51px 0;
+      }
+    }
+    .prices__article:nth-child(2) {
+      height: 277px;
+      width: 339px;
+
+      .prices__article-list{
+        margin: 51px 20px 30px 0;
+      }
+      .prices__items {
+        margin-bottom: 20px;
+      }
     }
   }
 }
