@@ -25,6 +25,13 @@
                         <li class="header__text"><a href="#prices">prices</a></li>
                         <li class="header__text"><a href="#contact">contact</a></li>
                     </ul>
+
+                    <button class="page-nav-toogle">
+                        <strong>Menu</strong>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
                 </nav>
             </div>
         </header>
@@ -293,12 +300,12 @@
 
     <script>
         const btn = document.querySelector(".page-nav-toogle");
-        const nav = document.querySelector(".nav__list");
-        const page = document.querySelector(".page");
+        const nav = document.querySelector(".header__nav-list");
+        // const page = document.querySelector(".page");
 
         btn.onclick = function () {
             nav.classList.toggle("show");
-            page.classList.toggle("show");
+            // page.classList.toggle("show");
         }
     </script>
 </body>
