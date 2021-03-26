@@ -1,4 +1,5 @@
 @use "sass:color";
+
 * {
   box-sizing: border-box;
 }
@@ -78,6 +79,7 @@ a {
 .header__text a:hover {
   border-bottom: 4px solid hsl(197, 93%, 46%);
 }
+
 .page-nav-toogle {
   width: 60px;
   height: 40px;
@@ -104,6 +106,7 @@ a {
     background: #08a5e2;
     margin: 2px;
     display: block;
+    transition: 0.5s;
   }
 }
 
@@ -117,6 +120,10 @@ a {
   margin-top: 130px;
   text-align: center;
   width: 100%;
+}
+
+.welcome__image {
+  margin-top: 40px;
 }
 
 .weclome__title {
@@ -657,23 +664,26 @@ a {
   margin-top: 35px;
   margin-bottom: 30px;
 }
+
 .footer__social a {
   width: 24px;
   height: 24px;
   margin-left: 20px;
 }
 
-@media (max-width: 1250px){
+@media (max-width: 1250px) {
   .container {
     .prices__box {
       gap: 20px;
+
       .prices__article {
         width: 300px;
       }
     }
   }
 }
-@media (max-width: 1050px){
+
+@media (max-width: 1050px) {
   .benefits__title {
     margin-bottom: 30px;
   }
@@ -707,9 +717,11 @@ a {
   .benefits__cut {
     display: flex;
     flex-direction: column;
+
     .benefits__trumpet {
       width: 100%;
     }
+
     .benefits__image {
       margin-left: 0;
       margin-top: 0;
@@ -721,17 +733,29 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: center;
+
     .prices__article {
       margin-bottom: 20px;
     }
+
     .prices__article:nth-child(2) {
       width: 430px;
     }
   }
+
   .benefits {
     .container {
-      .benefits__title {
-        margin-top: 20px;
+      .benefits__trumpet {
+        justify-content: center;
+
+        .benefits__text {
+          margin-top: 0;
+        }
+
+        .benefits__title {
+          margin-top: 20px;
+        }
+
       }
     }
   }
@@ -755,6 +779,7 @@ a {
           .form__row {
             width: 100%;
           }
+
           .from__row-last {
             .form__btn {
               margin-left: 116px;
@@ -769,9 +794,11 @@ a {
           display: flex;
           flex-direction: column;
           align-items: flex-start;
+
           .contact__email {
             margin-bottom: 20px;
           }
+
           .contact__phone::before {
             margin-left: 0;
           }
@@ -786,7 +813,19 @@ a {
     }
   }
 }
-@media (max-width: 670px){
+
+@media (max-width: 700px) {
+  .welcome {
+    overflow: hidden;
+
+    .welcome__image {
+      width: 200%;
+      transform: translate(-26%);
+    }
+  }
+}
+
+@media (max-width: 670px) {
   .header__nav-list a {
     padding: 20px 20px 20px;
   }
@@ -795,6 +834,7 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: center;
+
     .description__article {
       margin: 20px;
     }
@@ -803,25 +843,30 @@ a {
   .benefits {
     .container {
       padding: 0 40px;
+
       .benefits__text {
         margin-right: 0;
       }
+
       .benefits__img-macbook {
         width: 192px;
         height: 110px;
         margin: 0;
       }
+
       .benefits__img-iphone {
         width: 175px;
         height: 135px;
         margin-left: 20px;
       }
+
       .benefits__laptop .benefits__image::before {
         width: 90px;
         height: 90px;
         right: -10px;
         top: -30px;
       }
+
       .benefits__phone .benefits__image::before {
         width: 130px;
         height: 130px;
@@ -833,18 +878,22 @@ a {
         .benefits__text::after {
           display: none;
         }
+
         .benefits__title {
           margin-left: 20px;
           margin-right: 20px;
         }
+
         .benefits__description {
           margin-left: 20px;
           margin-right: 20px;
         }
       }
+
       .benefits__cut {
         .benefits__trumpet {
           margin-bottom: -30px;
+
           .benefits__text {
             justify-content: flex-start;
           }
@@ -855,7 +904,7 @@ a {
 
 }
 
-@media (max-width: 510px){
+@media (max-width: 510px) {
   .header__logo {
     font-size: 20px;
   }
@@ -873,28 +922,25 @@ a {
       margin-right: 30px;
       flex-wrap: wrap;
     }
+
     .welcome__btn {
       width: 310px;
       padding: 22px 90px;
-      margin-bottom: 50px;
       margin-top: 0;
       align-self: center;
     }
   }
-  .welcome__image {
-    object-fit: fill;
-  }
-
-
 
   .benefits {
     .container {
       .benefits__text::after {
         display: none;
       }
+
       .benefits__cut {
         .benefits__image {
           height: 100%;
+
           .benefits__img-trumpet {
             margin-top: 40px;
           }
@@ -909,23 +955,28 @@ a {
       height: 251px;
 
       display: flex;
+
       .prices__details {
         margin: 70px 22px 94px 45px;
+
         .tariff__type {
           margin-top: 0;
         }
       }
+
       .prices__article-list {
         margin: 40px 20px 51px 0;
       }
     }
+
     .prices__article:nth-child(2) {
       height: 277px;
       width: 339px;
 
-      .prices__article-list{
+      .prices__article-list {
         margin: 51px 20px 30px 0;
       }
+
       .prices__items {
         margin-bottom: 20px;
       }
@@ -944,7 +995,7 @@ a {
 
 }
 
-@media (max-width: 375px){
+@media (max-width: 375px) {
   .header__logo {
     margin-left: 25px;
     font-size: 30px;
@@ -978,8 +1029,9 @@ a {
       a {
         font-size: 14px;
         color: #A5A5A5;
-        font-family: "Open Sans",sans-serif;
+        font-family: "Open Sans", sans-serif;
       }
+
       a:hover {
         border-bottom: none;
       }
@@ -989,10 +1041,33 @@ a {
       left: 0;
     }
 
+
     .page-nav-toogle {
       display: flex;
       z-index: 2;
     }
   }
 
+  .header__nav.show {
+
+    .page-nav-toogle span:nth-child(2) {
+      transform: rotate(45deg);
+      margin: -4px;
+      transition: 0.5s;
+    }
+
+    .page-nav-toogle span:nth-child(3) {
+      transform: rotate(-45deg);
+    }
+
+    .page-nav-toogle span:last-child {
+      display: none;
+    }
+  }
+
+  .prices__box {
+    .prices__article {
+      margin-bottom: 30px;
+    }
+  }
 }
