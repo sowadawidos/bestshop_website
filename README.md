@@ -1,4 +1,11 @@
-# bestshop_website
+# Project overview
 
+Simple website to menage your online shops.
 
-It's a project of website on which a customer can sell their products. 
+# Technologies
+- HTML
+- Sass
+
+# Demo
+
+https://sowadawidos.github.io/bestshop_website/
