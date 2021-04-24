@@ -5,6 +5,7 @@ Simple website to menage your online shops. Project based on: https://xd.adobe.c
 # Technologies
 - HTML
 - Sass
+- JavaScript (ES6)
 
 # Demo
 
