@@ -3,3 +3,8 @@
 /workspace.xml
 # Editor-based HTTP Client requests
 /httpRequests/
+../gulpfile.js
+../node_modules
+../package-lock.json
+../.idea
+
