@@ -1,6 +1,6 @@
 # Project overview
 
-Simple website to menage your online shops.
+Simple website to menage your online shops. Project based on: https://xd.adobe.com/view/31804ad0-5f57-46e0-6edf-a5f54c37078a-47b1/grid/
 
 # Technologies
 - HTML
