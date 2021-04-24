@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box;
+}
+
+:focus {
+  outline: 1px solid hsl(240, 1%, 27%);
+}
+
+html {
+  font-family: $font-open-sans;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1352px;
+  margin: 0 auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}

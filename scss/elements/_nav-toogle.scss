@@ -1,0 +1,29 @@
+.page-nav-toogle {
+  width: 60px;
+  height: 40px;
+  border: none;
+  border-radius: 4px;
+  background: $color-white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-right: 10px;
+  flex-direction: column;
+
+  display: none;
+
+  strong {
+    display: none;
+  }
+
+  span {
+    width: 25px;
+    height: 3px;
+    border-radius: 4px;
+    background: $color-primary;
+    margin: 2px;
+    display: block;
+    transition: 0.5s;
+  }
+}

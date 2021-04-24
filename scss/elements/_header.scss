@@ -1,0 +1,139 @@
+.header {
+  height: 70px;
+  box-shadow: 0 -7px 20px $color-black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  transition: 0.5s;
+}
+
+.header.sticky {
+  height: 80px;
+  background: $color-white;
+  box-shadow: 0 0 20px $color-light-grey;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.header__logo {
+  color: $color-primary;
+  font-size: 32px;
+  font-weight: 300;
+  font-family: $font-raleway;
+}
+
+.header__nav-list {
+  display: flex;
+  list-style-type: none;
+}
+
+.header__nav-list a {
+  color: $color-grey;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 11px;
+  padding: 28px 40px 22px;
+  transition: 0.2s;
+}
+
+.header__nav-list a:hover,
+.header__nav-list.show a:hover {
+  color: $color-black;
+}
+
+.header__text a:hover {
+  border-bottom: 4px solid $color-primary;
+}
+
+@media (max-width: 670px) {
+  .header__nav-list a {
+    padding: 20px 20px 20px;
+  }
+}
+
+@media (max-width: 510px) {
+  .header__logo {
+    font-size: 20px;
+  }
+  .header__nav-list a {
+    padding: 20px 5px 20px;
+  }
+}
+
+@media (max-width: 375px) {
+  .header__logo {
+    margin-left: 25px;
+    font-size: 30px;
+  }
+  .header__nav {
+    .header__nav-list {
+      position: fixed;
+      left: -100%;
+      top: 70px;
+      background: $color-white;
+      margin: 0;
+      flex-direction: column;
+      height: 175px;
+      width: 100%;
+      padding: 20px;
+      transition: 0.5s;
+      box-shadow: -20px 4px 20px $color-black;
+
+      display: flex;
+      justify-content: flex-start;
+
+      a {
+        padding: 5px;
+      }
+
+    }
+
+    .header__text {
+      margin-bottom: 15px;
+
+      a {
+        font-size: 14px;
+        color: $color-grey;
+        font-family: $font-open-sans;
+      }
+
+      a:hover {
+        border-bottom: none;
+      }
+    }
+
+    .header__nav-list.show {
+      left: 0;
+    }
+
+
+    .page-nav-toogle {
+      display: flex;
+      z-index: 2;
+    }
+  }
+
+  .header__nav.show {
+
+    .page-nav-toogle span:nth-child(2) {
+      transform: rotate(45deg);
+      margin: -4px;
+      transition: 0.5s;
+    }
+
+    .page-nav-toogle span:nth-child(3) {
+      transform: rotate(-45deg);
+    }
+
+    .page-nav-toogle span:last-child {
+      display: none;
+    }
+  }
+}

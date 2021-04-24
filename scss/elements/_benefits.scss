@@ -1,0 +1,289 @@
+.benefits {
+  background: $color-light-grey;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.benefits .container {
+  padding: 0 100px;
+}
+
+.benefits__article {
+  background-color: $color-white;
+  border: 1px solid $color-light-grey;
+  border-radius: 5px;
+  margin-bottom: 37px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+}
+
+.benefits__text {
+  max-width: 416px;
+  margin-top: 90px;
+  margin-left: 36px;
+  margin-right: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.benefits__text:after {
+  content: "";
+  width: 327px;
+  height: 4px;
+  background-color: $color-redish;
+  display: block;
+  margin-bottom: 90px;
+}
+
+.benefits__title {
+  font-family: $font-raleway;
+  font-weight: normal;
+  font-size: 36px;
+  color: $color-black;
+}
+
+.benefits__description {
+  margin-top: 30px;
+  color: $color-black;
+  margin-bottom: 50px;
+}
+
+.benefits__article:nth-child(2) .benefits__text:after {
+  background-color: $color-primary;
+}
+
+.benefits__cut .benefits__text:after {
+  background-color: $color-green;
+}
+
+.benefits__img-macbook {
+  margin-bottom: 38px;
+  margin-right: 117px;
+  width: 386px;
+}
+
+.benefits__image {
+  position: relative;
+}
+
+.benefits__img-macbook {
+  position: relative;
+  z-index: 2;
+}
+
+.benefits__laptop .benefits__image::before {
+  content: "";
+  width: 200px;
+  height: 200px;
+  background-color: $color-redish;
+  display: block;
+  border-radius: 41px;
+  position: absolute;
+  top: -49px;
+  right: 93px;
+  transform: rotate(45deg);
+}
+
+.benefits__phone .benefits__title {
+  margin-right: 100px;
+}
+
+.benefits__phone {
+  flex-direction: row-reverse;
+
+}
+
+.benefits__img-iphone {
+  position: relative;
+  z-index: 2;
+  width: 426px;
+  margin-left: 70px;
+  margin-bottom: 15px;
+}
+
+.benefits__phone .benefits__image::before {
+  content: "";
+  width: 280px;
+  height: 280px;
+  background-color: $color-primary;
+  display: block;
+  border-radius: 50%;
+  position: absolute;
+  top: -21px;
+  right: 150px;
+}
+
+.benefits__img-trumpet {
+  width: 295px;
+  margin: auto;
+}
+
+.benefits__cut {
+  display: flex;
+}
+
+.benefits__trumpet {
+  width: 623px;
+  height: 370px;
+}
+
+.benefits__cut .benefits__image {
+  margin-left: 60px;
+  width: 440px;
+  height: 370px;
+  background: $color-green;
+  border: 1px solid $color-light-grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+@media (max-width: 1050px) {
+  .benefits__title {
+    margin-bottom: 30px;
+  }
+  .benefits__article {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .benefits__image {
+    margin-top: 100px;
+  }
+  .benefits__laptop .benefits__image::before {
+    top: -42px;
+    right: -4px;
+  }
+
+  .benefits__img-macbook {
+    margin: auto;
+
+  }
+  .benefits__text {
+    margin-top: 10px;
+    margin-left: 0;
+  }
+  .benefits__phone {
+    .benefits__title {
+      align-items: center;
+      margin: 0;
+      margin-bottom: 30px;
+    }
+  }
+  .benefits__cut {
+    display: flex;
+    flex-direction: column;
+
+    .benefits__trumpet {
+      width: 100%;
+    }
+
+    .benefits__image {
+      margin-left: 0;
+      margin-top: 0;
+      width: 100%;
+    }
+
+  }
+
+  .benefits {
+    .container {
+      .benefits__trumpet {
+        justify-content: center;
+
+        .benefits__text {
+          margin-top: 0;
+        }
+
+        .benefits__title {
+          margin-top: 20px;
+        }
+
+      }
+    }
+  }
+}
+@media (max-width: 670px) {
+  .benefits {
+    .container {
+      padding: 0 40px;
+
+      .benefits__text {
+        margin-right: 0;
+      }
+
+      .benefits__img-macbook {
+        width: 192px;
+        height: 110px;
+        margin: 0;
+      }
+
+      .benefits__img-iphone {
+        width: 175px;
+        height: 135px;
+        margin-left: 20px;
+      }
+
+      .benefits__laptop .benefits__image::before {
+        width: 90px;
+        height: 90px;
+        right: -10px;
+        top: -30px;
+      }
+
+      .benefits__phone .benefits__image::before {
+        width: 130px;
+        height: 130px;
+        top: -21px;
+        right: 50px;
+      }
+
+      .benefits__article {
+        .benefits__text::after {
+          display: none;
+        }
+
+        .benefits__title {
+          margin-left: 20px;
+          margin-right: 20px;
+        }
+
+        .benefits__description {
+          margin-left: 20px;
+          margin-right: 20px;
+        }
+      }
+
+      .benefits__cut {
+        .benefits__trumpet {
+          margin-bottom: -30px;
+
+          .benefits__text {
+            justify-content: flex-start;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 510px) {
+  .benefits {
+    .container {
+      .benefits__text::after {
+        display: none;
+      }
+      .benefits__cut {
+        .benefits__image {
+          height: 100%;
+          .benefits__img-trumpet {
+            margin-top: 40px;
+          }
+        }
+      }
+    }
+  }
+}

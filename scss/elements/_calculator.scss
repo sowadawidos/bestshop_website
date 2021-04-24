@@ -1,0 +1,269 @@
+@mixin tablet {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+
+.calc {
+  padding: 80px 0;
+  background-color: $color-light-grey;
+
+  @include tablet {
+    padding: 30px 15px;
+  }
+
+  h2 {
+    font-family: $font-raleway;
+    font-weight: normal;
+    font-size: 24px;
+    text-align: center;
+  }
+
+  &__columns {
+    max-width: 865px;
+    margin: 50px auto 0;
+    display: flex;
+
+    @include tablet {
+      width: 90%;
+      display: block;
+    }
+  }
+
+  &__form {
+    width: 50%;
+    margin-right: 20px;
+
+    @include tablet {
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+
+
+  &__input input,
+  &__select .select__input {
+    color: $color-grey;
+    width: 100%;
+    border-radius: 6px;
+    border: 1px solid $color-primary;
+    padding: 11px 20px;
+    line-height: 1em;
+    font-size: 0.8125rem;
+    box-shadow: 0px 3px 6px $color-primary-shadow;
+    margin-bottom: 20px;
+    background-color: $color-white;
+  }
+
+  &__input {
+    input {
+      &::placeholder {
+        color: $color-grey;
+      }
+    }
+  }
+
+  &__select {
+    position: relative;
+
+    .select__input {
+      position: relative;
+      height: 40px;
+      vertical-align: middle;
+      padding: 13px 20px;
+      cursor: pointer;
+
+      &::after {
+        content: "";
+        background-image: url("../assets/right-arrow.svg");
+        width: 15px;
+        height: 15px;
+        display: block;
+        position: absolute;
+        right: 14px;
+        top: 9px;
+      }
+    }
+
+    .select__dropdown {
+      display: none;
+      position: absolute;
+      z-index: 1;
+      background-color: white;
+      width: 100%;
+      border-radius: 6px;
+      border: 1px solid $color-redish;
+      overflow: hidden;
+
+      li {
+        font-size: 13px;
+        padding: 10px 20px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: $color-light-grey;
+        }
+      }
+    }
+
+
+    &.open {
+      .select__input::after {
+        transform: rotate(90deg);
+
+      }
+
+      .select__dropdown {
+        display: block;
+      }
+    }
+  }
+
+  .form__checkbox {
+    .consent__text {
+      padding-top: 4px;
+    }
+  }
+
+  &__summary {
+    width: 50%;
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+
+    @include tablet {
+      width: 100%;
+      margin-left: 0;
+      margin-top: 30px;
+    }
+
+    .summary__total,
+    .list__item {
+      box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
+      border-radius: 6px;
+      justify-content: space-between;
+      align-items: center;
+      color: $color-white;
+      font-size: 0.875rem;
+      display: none;
+
+      &.open {
+        display: flex;
+      }
+    }
+
+    .summary__total {
+      width: 50%;
+      align-self: flex-end;
+      margin-top: 22px;
+      padding: 8px 20px;
+      background-color: $color-primary;
+
+      .total__price {
+        font-size: 1.25rem;
+        font-weight: 700;
+      }
+    }
+
+    .list__item {
+      padding: 6px 20px;
+      background-color: $color-green;
+      margin-bottom: 8px;
+
+      .item {
+        &__price {
+          font-weight: 700;
+          font-size: 1.125rem;
+        }
+      }
+    }
+  }
+}
+.form {
+  display: flex;
+  flex-direction: column;
+
+  @include tablet {
+    margin-top: 20px;
+  }
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+
+    &:first-of-type {
+      margin-bottom: 42px;
+    }
+  }
+
+  &__label {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $color-primary;
+    line-height: 0.9rem;
+    letter-spacing: 3px;
+    font-size: 0.6875rem;
+  }
+
+  &__input {
+    border: none;
+    border-bottom: 1px solid $color-grey;
+    background-color: transparent;
+    line-height: 2.625rem;
+  }
+
+  &__consent {
+    margin-top: 30px;
+  }
+
+  &__checkbox {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 1.375rem;
+
+    input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+
+      &:checked {
+        ~ .checkbox {
+          background-image: url(../assets/Checkmark.svg);
+          background-position: center;
+          background-size: 50%;
+          background-repeat: no-repeat;
+        }
+      }
+    }
+
+    .checkbox {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 25px;
+      width: 25px;
+      background-color: $color-white;
+      border: 1px solid $color-grey;
+      border-radius: 4px;
+    }
+
+    .consent__text {
+      margin: 0 10px;
+      font-size: 0.75rem;
+      color: $color-grey;
+      line-height: 17px;
+    }
+  }
+
+  .btn {
+    font-size: 0.8125rem;
+    padding: 20px 97px;
+    align-self: flex-end;
+    margin-top: 20px;
+  }
+}
